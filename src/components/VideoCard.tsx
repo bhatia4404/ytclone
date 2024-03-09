@@ -9,7 +9,7 @@ export function VideoCard({
   timeStamp,
 }: any) {
   return (
-    <div className="m-2.5">
+    <div className="">
       <img src={imgLink} alt="" className="h-auto w-auto mb-3 rounded-xl" />
       <div className="flex">
         <img

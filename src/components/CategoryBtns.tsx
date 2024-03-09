@@ -15,20 +15,30 @@ export function CategoryBtns({ categories }: any) {
     { key: 4, text: "Movie Musicals" },
     { key: 5, text: "Live" },
     { key: 6, text: "Gaming" },
-    { key: 6, text: "Game Shows" },
-    { key: 7, text: "Lo-fi" },
-    { key: 8, text: "Bollywood Music" },
-    { key: 9, text: "NEET" },
-    { key: 10, text: "Cooking Shows" },
-    { key: 11, text: "Cars" },
-    { key: 11, text: "Hindu" },
+    { key: 7, text: "Game Shows" },
+    { key: 8, text: "Lo-fi" },
+    { key: 9, text: "Bollywood Music" },
+    { key: 10, text: "NEET" },
+    { key: 11, text: "Cooking Shows" },
+    { key: 12, text: "Cars" },
+    { key: 13, text: "Hindu" },
   ];
   return (
     <div className="cat_buttons flex gap-5 m-2.5 w-auto overflow-hidden">
       {categories1.map((cat: any) => (
         <button
           key={cat.key}
-          className="bg-gray-100 rounded-md font-semibold whitespace-nowrap pt-1 pb-1 pl-3 pr-3 hover:bg-gray-200"
+          className={`cat_btn bg-gray-100 rounded-md font-semibold whitespace-nowrap pt-1 pb-1 pl-3 pr-3 hover:bg-gray-200 ${
+            cat.text === "All" ? "active" : ""
+          } mb-5`}
+          onClick={function (e) {
+            document.body.querySelectorAll(".cat_btn").forEach((btn) => {
+              btn.classList.remove("active");
+              btn.classList.add("hover:bg-gray-200");
+            });
+            e.target.classList.add("active");
+            e.target.classList.remove("hover:bg-gray-200");
+          }}
         >
           {cat.text}
         </button>

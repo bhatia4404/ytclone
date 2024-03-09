@@ -17,13 +17,15 @@ const config: Config = {
         signBlue: "#065fda",
       },
       screens: {
-        xxs: "638px",
-        xs: "685px",
-        sm: "1090px",
-        l: "1400px",
+        s: "680px",
+        sbh: "775px",
+        l: "1080px",
       },
       fontSize: {
         xxs: "10px",
+      },
+      boxShadow: {
+        "2xl": "-0px 35px 60px 15px rgba(0, 0, 0, 0.2)",
       },
     },
     plugins: [],

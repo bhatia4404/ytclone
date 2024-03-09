@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.active {
+  background-color: #000;
+  color: #fff;
+}
+/* home svg --active */
+.active_home_svg {
+  fill: #000;
+}
+/* shorts svg --active  */
+.active_shorts_svg {
+  fill: #000;
+}
+.active_shorts_svg_path1 {
+  fill: #000;
+}
+
+.active_shorts_svg_path2 {
+  fill: #fff;
+}
+.btn_side {
+  gap: 20px;
+}

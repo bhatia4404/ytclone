@@ -1,0 +1,16 @@
+function (e) {
+            e.currentTarget
+              .querySelector("svg")
+              ?.classList.add("active_home_svg");
+            const container = e.currentTarget.closest(".cont");
+
+            // removing active from others
+            // shorts
+            container
+              ?.querySelector(".shorts_svg_path1")
+              ?.classList.remove("active_shorts_svg_path1");
+            container
+              ?.querySelector(".shorts_svg_path2")
+              ?.classList.remove("active_shorts_svg_path2");
+            //subscriptions
+            

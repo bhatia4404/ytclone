@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { VideoCard } from "@/components/VideoCard";
 import { AppBar } from "@/components/AppBar";
-import { SideBar } from "@/components/SideBar";
+import { SideBar } from "@/components/SideBar1";
 import { CategoryBtns } from "@/components/CategoryBtns";
 const inter = Inter({ subsets: ["latin"] });
 const videos = [
@@ -78,9 +78,12 @@ export default function Home() {
       <AppBar />
       <div className="videosncatNSide flex">
         <SideBar />
-        <div className="videosncat flex flex-col w-[100%]">
+        <div className=" videosncat flex flex-col w-[81%]">
           <CategoryBtns />
-          <div className="videos xs:grid grid-cols-1 xs: grid-cols-2 sm:grid-cols-3 l:grid-cols-4 ml-auto  max-xs:mr-auto xs:auto l:mr-0 mr-20">
+          <div
+            className="videos grid grid-cols-1 s:grid-cols-2 
+          l:grid-cols-3 gap-3 ml-auto mr-auto"
+          >
             {videos.map((video) => (
               <VideoCard
                 key={video.key}
@@ -92,7 +95,6 @@ export default function Home() {
                 timeStamp={video.timeStamp}
               />
             ))}
-            C
           </div>
         </div>
       </div>
