@@ -75,15 +75,13 @@ const videos = [
 export default function Home() {
   return (
     <div>
+      <div className="overlay hidden max-l:block "></div>
       <AppBar />
       <div className="videosncatNSide flex">
         <SideBar />
-        <div className=" videosncat flex flex-col w-[81%]">
+        {/* <div className="videosncat flex flex-col">
           <CategoryBtns />
-          <div
-            className="videos grid grid-cols-1 s:grid-cols-2 
-          l:grid-cols-3 gap-3 ml-auto mr-auto"
-          >
+          <div className="videos grid">
             {videos.map((video) => (
               <VideoCard
                 key={video.key}
@@ -96,7 +94,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

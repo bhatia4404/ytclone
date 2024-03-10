@@ -3,12 +3,25 @@ import { SignIn } from "./signin";
 export function AppBar() {
   return (
     <div>
-      <div className="flex items-center gap-2 s:justify-between ml-5 ">
-        <div className="barNlogo flex  items-center gap-3 w-30 shrink-0">
+      <div className="flex items-center gap-2 s:justify-between ">
+        <div
+          className="barNlogo
+        l:z-10 flex items-center gap-3 w-30 shrink-0 w-[220px] bg-white pl-3"
+        >
           <button
             className="hover:bg-gray-200 p-2 rounded-3xl"
             onClick={function () {
-              document.querySelector(".sideBar")?.classList.toggle("hidden");
+              const sideBar = document.querySelector(".sideBar");
+              const overlay = document.querySelector(".overlay");
+              if (sideBar?.classList.contains("hiddenSideBar")) {
+                sideBar.classList.remove("hiddenSideBar");
+                sideBar.classList.add("visibleSideBar");
+                overlay?.classList.add("overlay_visible");
+              } else {
+                sideBar?.classList.remove("visibleSideBar");
+                sideBar?.classList.add("hiddenSideBar");
+                overlay?.classList.remove("overlay_visible");
+              }
             }}
           >
             <svg
