@@ -1,6 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* side buttons */
+@layer utilities {
+  .inactive {
+    width: 65px;
+  }
+  .inactive.hiddenSideBar {
+    transform: translate(0);
+  }
+  .inactive.overlay {
+    display: none;
+  }
+  .inactive.sideBar > .all_btns {
+    overflow: hidden;
+  }
+  .inactive.sideBar > .all_btns > .btns .btn_side {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    height: 70px;
+    padding-top: 15px;
+    font-size: 10px;
+  }
+  .inactive.sideBar {
+    position: relative;
+  }
+  .inactive.sideBar > .barNlogo,
+  hr.inactive,
+  .inactive.sideBar > .all_btns > .btns > .third_btns,
+  .inactive.sideBar > .all_btns > .btns > .fourth_btns,
+  .inactive.sideBar > .all_btns > .btns > .fifth_btns,
+  .inactive.sideBar > .all_btns > .btns > .sixth_btns,
+  .inactive.sideBar > .all_btns > .btns > .seventh_btns,
+  .inactive.sideBar > .all_btns > .btns > .eighth,
+  .inactive.sideBar > .all_btns > .btns > .ninth {
+    display: none;
+  }
+}
+/*  */
 .overlay_visible {
   position: fixed;
   z-index: 1;

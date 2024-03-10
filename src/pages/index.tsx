@@ -75,7 +75,7 @@ const videos = [
 export default function Home() {
   return (
     <div>
-      <div className="overlay hidden max-l:block "></div>
+      <div className="overlay hidden inactive max-l:block "></div>
       <AppBar />
       <div className="videosncatNSide flex">
         <SideBar />

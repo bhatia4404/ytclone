@@ -1,25 +1,34 @@
 import { SideBtn } from "./SideBtn";
 import { SignIn } from "./signin";
-
+function sideBarBtnHandler() {
+  const sideBar = document.querySelector(".sideBar");
+  const allBtnsDiv = sideBar?.querySelector(".all_btns");
+  const sideallbtns = sideBar?.querySelectorAll(".btns");
+  const overlay = document.querySelector(".overlay");
+  if (sideBar?.classList.contains("hiddenSideBar")) {
+    sideBar.classList.remove("hiddenSideBar");
+    sideBar.classList.add("visibleSideBar");
+    overlay?.classList.add("overlay_visible");
+  } else {
+    sideBar?.classList.remove("visibleSideBar");
+    sideBar?.classList.add("hiddenSideBar");
+    overlay?.classList.remove("overlay_visible");
+  }
+  if (sideBar?.classList.contains("inactive")) {
+    sideBar?.classList.remove("inactive");
+    sideBar.querySelector(".barNlogo")?.classList.remove("inactive");
+  } else {
+    sideBar?.classList.add("inactive");
+    sideBar?.querySelector(".barNlogo")?.classList.add("inactive");
+  }
+}
 export function SideBar() {
   return (
-    <div className="sideBar w-[220px] fixed bg-white max-l:top-0 h-[100%] max-l:z-10  pb-[75px]">
-      <div className="barNlogo relative items-center gap-3 w-30 shrink-0 ml-3 hidden max-l:flex">
+    <div className="sideBar w-[220px] fixed bg-white max-l:top-0 h-[100%] max-l:z-10  pb-[75px] max-l:inactive">
+      <div className="barNlogo relative items-center gap-3 w-30 shrink-0 ml-3 hidden max-l:flex ">
         <button
           className="hover:bg-gray-200 p-2 rounded-3xl"
-          onClick={function () {
-            const sideBar = document.querySelector(".sideBar");
-            const overlay = document.querySelector(".overlay");
-            if (sideBar?.classList.contains("hiddenSideBar")) {
-              sideBar.classList.remove("hiddenSideBar");
-              sideBar.classList.add("visibleSideBar");
-              overlay?.classList.add("overlay_visible");
-            } else {
-              sideBar?.classList.remove("visibleSideBar");
-              sideBar?.classList.add("hiddenSideBar");
-              overlay?.classList.remove("overlay_visible");
-            }
-          }}
+          onClick={sideBarBtnHandler}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -43,8 +52,8 @@ export function SideBar() {
           className="h-[64px] w-[108px] "
         />
       </div>
-      <div className="overflow-x-hidden overflow-y-scroll h-[100%]">
-        <div className="first_btns">
+      <div className="all_btns overflow-x-hidden overflow-y-scroll h-[100%] ">
+        <div className="btns first_btns ">
           <div
             className="btn_side flex items-center gap-5 pt-2 pb-2 pl-5 pr-5 bg-gray-200
           hover:bg-gray-200 rounded-xl cursor-pointer"
@@ -106,10 +115,10 @@ export function SideBar() {
             </button>
             <p className="">Subscriptions</p>
           </div>
-          <hr className="block mt-2 mb-2" />
+          <hr className="max-l:inactive  block mt-2 mb-2" />
         </div>
 
-        <div className="second_btns ">
+        <div className="btns second_btns">
           <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
             <button className="">
               <svg
@@ -139,13 +148,13 @@ export function SideBar() {
             </button>
             <p>You</p>
           </div>
-          <hr />
-          <div className="third_btns flex flex-col gap-3 justify-around pt-2 pb-2 pl-5 pr-5 w-[220px]  text-start">
+          <hr className="max-l:inactive" />
+          <div className=" btns  third_btns flex flex-col gap-3 justify-around pt-2 pb-2 pl-5 pr-5 w-[220px]  text-start">
             <p>Sign in to like videos, comment, and subscribe.</p>
             <SignIn />
           </div>
-          <hr className="block mt-2 mb-2" />
-          <div className="fourth_btns">
+          <hr className="block mt-2 mb-2 max-l:inactive" />
+          <div className="btns fourth_btns max-l:inactive">
             <p className="font-semibold pt-2 pb-2 pl-5 pr-5">Explore</p>
             <div
               className="btn_side flex items-center gap-5 pt-2 pb-2 pl-5 pr-5
@@ -313,8 +322,8 @@ export function SideBar() {
               <p>Podcasts</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2" />
-          <div className="fifth_btns">
+          <hr className="block mt-2 mb-2 max-l:inactive" />
+          <div className="btns fifth_btns max-l:inactive">
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
                 <svg
@@ -330,8 +339,8 @@ export function SideBar() {
               <p className="whitespace-nowrap">Browse Channels</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2" />
-          <div className="sixth_btns">
+          <hr className="block mt-2 mb-2 max-l:inactive" />
+          <div className="btns sixth_btns max-l:inactive">
             <h3 className="pl-5 pr-5 font-semibold">More from Youtube</h3>
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
@@ -453,8 +462,8 @@ export function SideBar() {
               <p>Youtube Kids</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2" />
-          <div className="seventh_btns">
+          <hr className="block mt-2 mb-2 max-l:inactive" />
+          <div className="btns seventh_btns max-l:inactive">
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
                 <svg
@@ -516,8 +525,8 @@ export function SideBar() {
               <p>Send feedback</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2" />
-          <div className="eighth text-xs ml-4 text-gray-600 font-semibold">
+          <hr className="block mt-2 mb-2 max-l:inactive" />
+          <div className="btns eighth max-l:inactive text-xs ml-4 text-gray-600 font-semibold">
             <div className="line1 flex justify-start gap-3">
               <a href="#">About</a>
               <a href="#">Press</a>
@@ -532,8 +541,8 @@ export function SideBar() {
               <a href="#">Developers</a>
             </div>
             <br />
-            <div className="ninth">
-              <div className="line1 flex justify-start gap-3">
+            <div className="btns ninth max-l:inactive">
+              <div className="line line1 flex justify-start gap-3">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
                 <a href="#">Policy & Safety</a>
