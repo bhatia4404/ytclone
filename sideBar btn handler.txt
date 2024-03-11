@@ -1,0 +1,13 @@
+function () {
+              const sideBar = document.querySelector(".sideBar");
+              const overlay = document.querySelector(".overlay");
+              if (sideBar?.classList.contains("hiddenSideBar")) {
+                sideBar.classList.remove("hiddenSideBar");
+                sideBar.classList.add("visibleSideBar");
+                overlay?.classList.add("overlay_visible");
+              } else {
+                sideBar?.classList.remove("visibleSideBar");
+                sideBar?.classList.add("hiddenSideBar");
+                overlay?.classList.remove("overlay_visible");
+              }
+            }

@@ -1,28 +1,16 @@
 import { SignIn } from "./signin";
-
+import { sideBarBtnHandler } from "./sideBarHandler";
 export function AppBar() {
   return (
     <div>
       <div className="flex items-center gap-2 s:justify-between ">
         <div
           className="barNlogo
-        l:z-10 flex items-center gap-3 w-30 shrink-0 w-[220px] bg-white pl-3"
+        l:z-10 flex items-center gap-3 w-30 shrink-0 w-[220px] bg-white pl-3 z-10"
         >
           <button
             className="hover:bg-gray-200 p-2 rounded-3xl"
-            onClick={function () {
-              const sideBar = document.querySelector(".sideBar");
-              const overlay = document.querySelector(".overlay");
-              if (sideBar?.classList.contains("hiddenSideBar")) {
-                sideBar.classList.remove("hiddenSideBar");
-                sideBar.classList.add("visibleSideBar");
-                overlay?.classList.add("overlay_visible");
-              } else {
-                sideBar?.classList.remove("visibleSideBar");
-                sideBar?.classList.add("hiddenSideBar");
-                overlay?.classList.remove("overlay_visible");
-              }
-            }}
+            onClick={sideBarBtnHandler}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +34,7 @@ export function AppBar() {
             className="h-[64px] w-[108px] "
           />
         </div>
-        <div className="searchnmic flex items-center ml-20 gap-2 w-1/2 ">
+        <div className="searchnmic flex items-center ml-20 gap-2 w-1/2 max-l:ml-0 ">
           <div className="searchBar flex justify-end border-0 s:border-2  w-full rounded-3xl m-0 pl-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +70,7 @@ export function AppBar() {
               }}
             />
             <button
-              className="sm:hover:bg-gray-100  s:rounded-l-none
+              className="max-sm:hover:bg-gray-200 sm:hover:bg-gray-100  s:rounded-l-none s:bg-[#f8f8f8] 
             p-2
              rounded-3xl s:pr-4 s:pl-3"
             >
@@ -122,9 +110,14 @@ export function AppBar() {
           <button
             className="btn_settings active:bg-gray-200 rounded-3xl p-2 transition-color duration-200 ease-in"
             onClick={function () {
-              document
-                .querySelector(".set_options")
-                ?.classList.toggle("hidden");
+              const app = document.querySelector(".app");
+              const setOptions = document.querySelector(".set_options");
+              setOptions?.classList.toggle("hidden");
+              if (!setOptions?.classList.contains("hidden")) {
+                app?.addEventListener("click", settingOptionsHandler);
+              } else {
+                app?.removeEventListener("click", settingOptionsHandler);
+              }
             }}
           >
             <svg
@@ -138,7 +131,7 @@ export function AppBar() {
               <path d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
             </svg>
           </button>
-          <div className="set_options absolute top-[45px] right-[130px] text-md  bg-white flex flex-col rounded-xl shadow-2xl text-[15px] pt-2 pb-2 hidden">
+          <div className=" set_options z-20 absolute top-[45px] right-[130px] text-md  bg-white flex flex-col rounded-xl shadow-2xl text-[15px] pt-2 pb-2 hidden">
             <div className="opt flex whitespace-nowrap gap-3 p-2 pl-4 pr-4 hover:bg-gray-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

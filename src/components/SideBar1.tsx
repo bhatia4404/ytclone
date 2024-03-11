@@ -1,31 +1,10 @@
 import { SideBtn } from "./SideBtn";
 import { SignIn } from "./signin";
-function sideBarBtnHandler() {
-  const sideBar = document.querySelector(".sideBar");
-  const allBtnsDiv = sideBar?.querySelector(".all_btns");
-  const sideallbtns = sideBar?.querySelectorAll(".btns");
-  const overlay = document.querySelector(".overlay");
-  if (sideBar?.classList.contains("hiddenSideBar")) {
-    sideBar.classList.remove("hiddenSideBar");
-    sideBar.classList.add("visibleSideBar");
-    overlay?.classList.add("overlay_visible");
-  } else {
-    sideBar?.classList.remove("visibleSideBar");
-    sideBar?.classList.add("hiddenSideBar");
-    overlay?.classList.remove("overlay_visible");
-  }
-  if (sideBar?.classList.contains("inactive")) {
-    sideBar?.classList.remove("inactive");
-    sideBar.querySelector(".barNlogo")?.classList.remove("inactive");
-  } else {
-    sideBar?.classList.add("inactive");
-    sideBar?.querySelector(".barNlogo")?.classList.add("inactive");
-  }
-}
+import { sideBarBtnHandler } from "./sideBarHandler";
 export function SideBar() {
   return (
-    <div className="sideBar w-[220px] fixed bg-white max-l:top-0 h-[100%] max-l:z-10  pb-[75px] max-l:inactive">
-      <div className="barNlogo relative items-center gap-3 w-30 shrink-0 ml-3 hidden max-l:flex ">
+    <div className="sideBar w-[220px] fixed bg-white max-l:top-0 h-[100%] max-l:z-10  pb-[75px] max-l:sbcLess hiddenSideBar ">
+      <div className="barNlogo items-center gap-3 w-30 shrink-0 ml-3 hidden max-l:flex z-2 ">
         <button
           className="hover:bg-gray-200 p-2 rounded-3xl"
           onClick={sideBarBtnHandler}

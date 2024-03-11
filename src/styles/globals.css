@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 /* side buttons */
+/* inactive means collapsed */
 @layer utilities {
+  .removeInactive {
+    all: unset;
+  }
   .inactive {
     width: 65px;
   }
@@ -36,6 +40,27 @@
   .inactive.sideBar > .all_btns > .btns > .eighth,
   .inactive.sideBar > .all_btns > .btns > .ninth {
     display: none;
+  }
+  .sbcLess {
+  }
+  .lessActive {
+    transform: translateX(0);
+    transition: all 0.25s ease-out;
+    width: 200px;
+    background-color: #fff;
+  }
+  .lessInactive {
+    transform: translateX(-220px);
+    transition: all 0.25s ease-out;
+  }
+  /* videos */
+  .left_videosncat {
+    transform: translateX(-220px);
+    transition: all 0.25s ease-out;
+  }
+  .right_videosncat {
+    transform: translateX(0);
+    transition: all 0.25s ease-out;
   }
 }
 /*  */
@@ -73,6 +98,8 @@
   transform: translateX(0);
   transition: all 0.25s ease-out;
   z-index: 2;
+  width: 220px;
+  background-color: #fff;
 }
 .hiddenSideBar {
   transform: translateX(-220px);

@@ -20,12 +20,19 @@ const config: Config = {
         s: "680px",
         sbh: "775px",
         l: "1080px",
+
+        vs: "610px", //till this 610px 1
+        vm: "1080px", //till 1080px 2
+        vl: "1495px", //till 1430px 3
       },
       fontSize: {
         xxs: "10px",
       },
       boxShadow: {
         "2xl": "-0px 35px 60px 15px rgba(0, 0, 0, 0.2)",
+      },
+      gridTemplateColumns: {
+        max: "repeat(4, minmax(0, 1fr))",
       },
     },
     plugins: [],

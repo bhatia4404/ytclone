@@ -1,0 +1,23 @@
+function sideBarBtnHandler() {
+  const sideBar = document.querySelector(".sideBar");
+  const allBtnsDiv = sideBar?.querySelector(".all_btns");
+  const sideallbtns = sideBar?.querySelectorAll(".btns");
+  const overlay = document.querySelector(".overlay");
+  if (sideBar?.classList.contains("hiddenSideBar")) {
+    sideBar.classList.remove("hiddenSideBar");
+    sideBar.classList.add("visibleSideBar");
+    overlay?.classList.add("overlay_visible");
+  } else {
+    sideBar?.classList.remove("visibleSideBar");
+    // sideBar?.classList.add("hiddenSideBar");
+    sideBar?.classList.add("inactive");
+    overlay?.classList.remove("overlay_visible");
+  }
+  if (sideBar?.classList.contains("inactive")) {
+    sideBar.querySelector(".barNlogo")?.classList.remove("inactive");
+  } else {
+    sideBar?.classList.add("inactive");
+    sideBar?.querySelector(".barNlogo")?.classList.add("inactive");
+    console.log(document);
+  }
+}

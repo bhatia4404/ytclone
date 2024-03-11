@@ -22,9 +22,11 @@ export function CategoryBtns({ categories }: any) {
     { key: 11, text: "Cooking Shows" },
     { key: 12, text: "Cars" },
     { key: 13, text: "Hindu" },
+    { key: 14, text: "Wickets" },
+    { key: 15, text: "Thriller" },
   ];
   return (
-    <div className="cat_buttons flex gap-5 mt-2.5 mb-2.5 w-auto overflow-hidden">
+    <div className="cat_buttons flex gap-4 mt-2.5 mb-2.5 w-[100%] overflow-hidden col-span-full">
       {categories1.map((cat: any) => (
         <button
           key={cat.key}
