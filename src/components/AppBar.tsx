@@ -16,15 +16,10 @@ export function AppBar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1"
               stroke="currentColor"
               className="w-6 h-6"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-              />
+              <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
           </button>
 
@@ -40,15 +35,10 @@ export function AppBar() {
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1"
               stroke="currentColor"
               className="w-6 h-6 hidden hidden_search stroke-[1.2] ml-2"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-              />
+              <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
             </svg>
             <input
               type="text"
@@ -78,15 +68,10 @@ export function AppBar() {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1"
                 stroke="currentColor"
                 className="w-6 h-6"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
-                />
+                <path d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </button>
           </div>
@@ -113,20 +98,14 @@ export function AppBar() {
               const app = document.querySelector(".app");
               const setOptions = document.querySelector(".set_options");
               setOptions?.classList.toggle("hidden");
-              if (!setOptions?.classList.contains("hidden")) {
-                app?.addEventListener("click", settingOptionsHandler);
-              } else {
-                app?.removeEventListener("click", settingOptionsHandler);
-              }
             }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 stroke-[1.5]"
             >
               <path d="M12 6.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 12.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5ZM12 18.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z" />
             </svg>

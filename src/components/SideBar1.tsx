@@ -13,7 +13,6 @@ export function SideBar() {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1"
             stroke="currentColor"
             className="w-6 h-6"
           >
@@ -94,7 +93,7 @@ export function SideBar() {
             </button>
             <p className="">Subscriptions</p>
           </div>
-          <hr className="max-l:inactive  block mt-2 mb-2" />
+          <hr className=" block mt-2 mb-2" />
         </div>
 
         <div className="btns second_btns">
@@ -127,13 +126,13 @@ export function SideBar() {
             </button>
             <p>You</p>
           </div>
-          <hr className="max-l:inactive" />
+          <hr className="" />
           <div className=" btns  third_btns flex flex-col gap-3 justify-around pt-2 pb-2 pl-5 pr-5 w-[220px]  text-start">
             <p>Sign in to like videos, comment, and subscribe.</p>
             <SignIn />
           </div>
-          <hr className="block mt-2 mb-2 max-l:inactive" />
-          <div className="btns fourth_btns max-l:inactive">
+          <hr className="block mt-2 mb-2 " />
+          <div className="btns fourth_btns ">
             <p className="font-semibold pt-2 pb-2 pl-5 pr-5">Explore</p>
             <div
               className="btn_side flex items-center gap-5 pt-2 pb-2 pl-5 pr-5
@@ -301,8 +300,8 @@ export function SideBar() {
               <p>Podcasts</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2 max-l:inactive" />
-          <div className="btns fifth_btns max-l:inactive">
+          <hr className="block mt-2 mb-2 " />
+          <div className="btns fifth_btns ">
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
                 <svg
@@ -318,8 +317,8 @@ export function SideBar() {
               <p className="whitespace-nowrap">Browse Channels</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2 max-l:inactive" />
-          <div className="btns sixth_btns max-l:inactive">
+          <hr className="block mt-2 mb-2 " />
+          <div className="btns sixth_btns ">
             <h3 className="pl-5 pr-5 font-semibold">More from Youtube</h3>
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
@@ -441,8 +440,8 @@ export function SideBar() {
               <p>Youtube Kids</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2 max-l:inactive" />
-          <div className="btns seventh_btns max-l:inactive">
+          <hr className="block mt-2 mb-2 " />
+          <div className="btns seventh_btns ">
             <div className="btn_side pt-2 pb-2 pl-5 pr-5 hover:bg-gray-200 rounded-xl cursor-pointer flex items-center">
               <button className="">
                 <svg
@@ -504,8 +503,8 @@ export function SideBar() {
               <p>Send feedback</p>
             </div>
           </div>
-          <hr className="block mt-2 mb-2 max-l:inactive" />
-          <div className="btns eighth max-l:inactive text-xs ml-4 text-gray-600 font-semibold">
+          <hr className="block mt-2 mb-2 " />
+          <div className="btns eighth text-xs ml-4 text-gray-600 font-semibold">
             <div className="line1 flex justify-start gap-3">
               <a href="#">About</a>
               <a href="#">Press</a>
@@ -520,7 +519,7 @@ export function SideBar() {
               <a href="#">Developers</a>
             </div>
             <br />
-            <div className="btns ninth max-l:inactive">
+            <div className="btns ninth ">
               <div className="line line1 flex justify-start gap-3">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
