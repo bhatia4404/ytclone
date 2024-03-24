@@ -150,7 +150,7 @@ export function AppBar() {
               <div className="flex whitespace-nowrap gap-3 ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  enable-background="new 0 0 24 24"
+                  enableBackground="new 0 0 24 24"
                   viewBox="0 0 24 24"
                   focusable="false"
                   className="h-6 w-6"
@@ -232,7 +232,7 @@ export function AppBar() {
             <div className="opt flex whitespace-nowrap gap-3  pt-3 pl-4 pr-4 p-2 mt-1 mb-1 hover:bg-gray-200">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 24 24"
+                enableBackground="new 0 0 24 24"
                 height="24"
                 viewBox="0 0 24 24"
                 width="24"
@@ -249,7 +249,7 @@ export function AppBar() {
             <div className="opt flex whitespace-nowrap gap-3  p-2 pl-4 pr-4 hover:bg-gray-200  mt-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 24 24"
+                enableBackground="new 0 0 24 24"
                 height="24"
                 viewBox="0 0 24 24"
                 width="24"
@@ -263,7 +263,7 @@ export function AppBar() {
             <div className="opt flex whitespace-nowrap gap-3  p-2 hover:bg-gray-200 pl-4 pr-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                enable-background="new 0 0 24 24"
+                enableBackground="new 0 0 24 24"
                 height="24"
                 viewBox="0 0 24 24"
                 width="24"
